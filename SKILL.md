@@ -1,7 +1,7 @@
 ---
 name: wordpress-plugin-growth-hacker
 description: Analyze WordPress plugin growth with customer WPInsight evidence, concise visual scorecards and specific experiments on demand.
-version: 0.1.0-beta.3
+version: 0.1.0-beta.4
 author: M Asif Rahman
 license: MIT
 category: marketing
@@ -45,10 +45,10 @@ Use this order. **Daily brief: at most 350 words including tables; deep analysis
 
 1. **Verdict:** at most 30 words; bottleneck/opportunity or “insufficient reliable data.” Context line: tenant label, slugs, actual dates/timezone, as-of and coverage.
 2. **Scorecard table:** Metric | Latest observed | Comparable baseline/change | Evidence/quality. Daily: 4–6 rows; deep: at most 8. Use “unavailable” with a reason, not zero. Label out-of-window reviews historical and undated totals undated; neither is current-period evidence. Date-only fields have unknown timezone unless documented. Never compare cached estimates as same-window evidence. Cite each numerical claim by returned URL or source key: tool, slug, dates, source timestamp. Navigation links are not historical proof.
-3. **Trend chart/graphic:** one compact dated line/bar chart for the strongest reliable signal using supported host rendering/plotting. Label metric, units, dates, timezone, source and missing points; invert rank axis or say “lower is better.” Never interpolate gaps, invent dates, mix scales or use generated imagery for quantitative charts. With valid series, actually test supported native chart capability before declaring rendering unavailable; then use a dated table. Missing data does not prove renderer failure. Without two reliable dated points, say “Trend unavailable: [reason]”; do not draw a decorative chart. Deep mode permits one additional evidence-backed graphic only if useful.
+3. **Trend chart/graphic:** one compact dated line/bar chart for the strongest reliable signal using supported host rendering/plotting. Use named color-coded legends; label units, dates, timezone, source and gaps; invert rank axis or say “lower is better.” Never interpolate gaps, invent dates, mix scales or use generated imagery for quantitative charts. With valid series, actually test supported native chart capability before declaring rendering unavailable; then use a dated table. Missing data does not prove renderer failure. Without two reliable dated points, say “Trend unavailable: [reason]”; do not draw a decorative chart. Deep mode permits one additional evidence-backed graphic only if useful.
 4. **Comparison table, only if supported:** selected primary vs at most two selected competitors, at most four like-for-like metrics. Require aligned dates/units, adequate coverage and fresh sources; otherwise one-line reason comparison is unavailable. Do not rank competitors using missing values.
-5. **Experiments table, maximum 3 prioritized rows:** Priority | Evidence/problem | Specific change | Effort | Success metric | Review window. Cite evidence; name the plugin/term/friction, one executable draft change, estimated S/M/L effort, observable target, baseline and dated review/stop criterion. Label causal reasoning as hypothesis; mention the main confounder briefly. Do not invent analytics, conversion baselines or numeric uplift targets. If evidence is insufficient, propose a specific validation step instead of a growth intervention.
-6. One limitations/source-key line. Do not repeat table findings in paragraphs. Offer deeper analysis only if useful.
+5. **Experiments table, maximum 3 prioritized rows:** Priority | Evidence/problem | Specific change | Effort | Success metric | Review window. Cite evidence; name the plugin/term/friction, one executable draft change, estimated S/M/L effort, observable target, baseline and dated review/stop criterion. Say “candidate explanation identified,” not “cause found/ruled out,” for observational timing; note confounders. Do not invent analytics, conversion baselines or numeric uplift targets. If evidence is insufficient, propose a specific validation step instead of a growth intervention.
+6. One limitations/source-key line. Do not repeat findings. Offer deeper analysis only if useful.
 
 No current customer vulnerability feed, installed-site inventory, revenue or conversion data exists. Never say “no vulnerabilities,” infer site exposure, or invent financial results. No promised one-agent Pro entitlement is included.
 
