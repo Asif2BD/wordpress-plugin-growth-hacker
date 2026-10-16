@@ -26,6 +26,12 @@ One failed signal need not block all analysis: quarantine only affected claims u
 - Cached approximate install estimates are contextual only. Do not compare them as same-window/current-period evidence or use them for growth/distance calculations. Compare compatible direct dated observations instead.
 - If a valid dated series exists, actually try the host's supported native chart capability before claiming it unavailable. Record the returned limitation/failure if it cannot render, and use a dated table. With insufficient data, say “Trend unavailable” and leave renderer capability unassessed; do not fake a chart or call lack of data a renderer limitation.
 
+## Chart legends and causal wording
+
+Use a named, color-coded legend for each plotted series (for example Acorn and Cedar), with matching labels/colors on the chart; never identify series only as first/second line or by color alone. Preserve actual plugin/keyword names and units. Rendering a fictional test chart proves only the tested host capability, not production data validity.
+
+When only observational timing supports an explanation, say “candidate explanation identified.” Do not say “cause found” or “cause ruled out.” List the plausible confounder and the evidence/experiment needed to distinguish alternatives. Missing evidence cannot rule out a cause; temporal coincidence cannot establish one.
+
 ## Experiments
 
 Choose at most three based on evidence strength, relevance to the user's plugin, plausible impact and estimated effort. Ordinal priority is judgment, not a fabricated growth score. Every intervention is a draft requiring approval before implementation.

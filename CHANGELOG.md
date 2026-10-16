@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0-beta.4 — 2026-10-16
+
+- Require named color-coded chart legends and cautious observational causal wording.
+- Record reported fictional-chart/deep-mode Grok UI evidence without transferring it to production data or final-version compatibility.
+- Preserve published beta.2 and beta.3 unchanged.
+
 ## 0.1.0-beta.3 — 2026-10-16
 
 - Label historical reviews and undated totals explicitly; do not infer source timezone from date-only fields or compare cached estimates as same-window evidence.

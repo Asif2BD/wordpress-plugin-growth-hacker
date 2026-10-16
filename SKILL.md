@@ -29,7 +29,7 @@ Read [capabilities](references/capabilities.md), [setup/privacy](references/setu
 
 ## Modes and staged calls
 
-Default **daily brief**: latest reliable changes, seven-day context, one primary and selected competitors; clarify ambiguous primary. **Deep analysis** is explicit: up to 30 days with keyword/review/support/positioning drill-down. Seven-day movement is not yesterday. Read [validation playbook](references/analysis-playbook.md) before interpretation.
+Default **daily brief**: reliable changes, seven-day context, one primary and selected competitors; clarify ambiguous primary. **Deep analysis** is explicit: up to 30 days with keyword/review/support/positioning drill-down. Seven-day movement is not yesterday. Read [validation playbook](references/analysis-playbook.md) before interpretation.
 
 1. Bind identity/selection and requested dates/timezone. Discover schemas; never guess parameters. Page selected results; disclose truncation/limits.
 2. Fetch primary plugin detail and `wpinsight_rankings_overview(includeSeries:true)` for baseline/dated context. Fetch `wpinsight_keywords_list(includeHistory:true)` for selected terms. Workspace KPIs are not selected-plugin KPIs.
@@ -41,7 +41,7 @@ Default **daily brief**: latest reliable changes, seven-day context, one primary
 
 ## Precise visual output contract
 
-Use this order. **Daily brief: at most 350 words including tables; deep analysis: at most 700.** Chart axis labels and compact source keys may be excluded from the count. No preamble, tool narration, repeated summaries, generic marketing tips or more than three experiments. Missing evidence reduces output; it does not license filler. Follow the [fictional daily example](references/daily-example.md).
+Use this order. **Daily brief: at most 350 words including tables; deep analysis: at most 700.** Exclude chart-axis labels and compact source keys from word counts. No preamble, tool narration, repeated summaries, generic marketing tips or more than three experiments. Missing evidence means less output, never filler. Follow the [fictional daily example](references/daily-example.md).
 
 1. **Verdict:** at most 30 words; bottleneck/opportunity or “insufficient reliable data.” Context line: tenant label, slugs, actual dates/timezone, as-of and coverage.
 2. **Scorecard table:** Metric | Latest observed | Comparable baseline/change | Evidence/quality. Daily: 4–6 rows; deep: at most 8. Use “unavailable” with a reason, not zero. Label out-of-window reviews historical and undated totals undated; neither is current-period evidence. Date-only fields have unknown timezone unless documented. Never compare cached estimates as same-window evidence. Cite each numerical claim by returned URL or source key: tool, slug, dates, source timestamp. Navigation links are not historical proof.
