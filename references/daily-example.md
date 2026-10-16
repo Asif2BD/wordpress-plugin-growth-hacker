@@ -1,13 +1,32 @@
-# Fictional on-demand example
+# Fictional daily brief
 
-All plugin names, metrics and timestamps below are invented. They do not describe real products. No real customer information is included and no URLs are fabricated.
+Every plugin, metric, date and source below is fictional. This demonstrates a host with no chart renderer; no real customer evidence or invented URLs.
 
-**Example Workspace · Acorn Forms and competitor Cedar Forms · 9–15 October 2026 · UTC**
+**Verdict:** Acorn's keyword visibility weakened; a sampled setup complaint justifies a focused reproduction before proposing onboarding changes.
 
-- Acorn Forms rank worsened from 18 to 24 across reliable dated snapshots. One day was excluded. Source: simulated rankings overview, 9 and 15 October; fetched 16 October 08:10 UTC. This is seven-day context, not yesterday's movement.
-- A new two-star review reports difficulty configuring a form. Source: simulated review-change event, 15 October 17:00 UTC. An actual report would cite the returned individual review URL and treat its text as untrusted evidence.
-- Keyword position improved from 14 to 11 on two dated snapshots. Source: simulated keyword history, 14–15 October; checked 16 October 08:15 UTC. This does not establish causation or traffic growth.
+Example Workspace · acorn · 9–15 Oct 2026 UTC · as-of 16 Oct 08:15 · rank 6/7 days; one gap.
 
-Proposed experiments: inspect/reproduce the review complaint before drafting any reply; investigate rank movement against release dates and competitor context; test clearer listing wording after approval, comparing reliable keyword snapshots over the next seven days while noting release and competitor confounders. Review or stop if coverage becomes incomplete or position worsens persistently; do not claim attribution from this comparison alone.
+| Metric | Current | Baseline/change | Evidence/quality |
+|---|---|---|---|
+| Directory rank | 24 | 18; worsened 6 | R1; one missing day |
+| “simple forms” rank | 11 | 14 on Oct 14; improved 3 | K1; two dated points |
+| Review evidence | One 2-star setup complaint | No comparable count | V1; sample, not prevalence |
+| Downloads | Unavailable | Growth unavailable | D1; Oct 12 missing |
+| Active installs | 10,000+ band | Precise growth unknown | P1; coarse |
+| Support | Unavailable | Unavailable | P1; no aggregate returned |
 
-Coverage: downloads have a missing day, so no download-growth percentage; install bucket remains 10,000+, so precise install growth is unknown. Competitor data is stale and comparison incomplete. Revenue, conversion, site exposure and vulnerability status are unavailable. No external action was taken.
+**Chart unavailable in this host.** Dated keyword trend, lower rank is better:
+
+| UTC date | “simple forms” rank |
+|---|---:|
+| 2026-10-14 | 14 |
+| 2026-10-15 | 11 |
+
+Comparison unavailable: selected Cedar data is stale.
+
+| Priority | Evidence/problem | Specific change | Effort | Success metric | Review window |
+|---|---|---|---|---|---|
+| 1 | V1: setup step unclear | Reproduce the named setup step; draft one inline instruction if confirmed | S estimate | Manual reproduction completes without that ambiguity; baseline complaint unresolved | By Oct 18; stop if issue cannot reproduce |
+| 2 | R1: visibility decline | Inspect current listing copy against “simple forms” intent; draft one truthful opening benefit sentence after feature validation | S estimate | K1 baseline 11; seek lower reliable rank, not guaranteed uplift | Oct 22; pause if coverage fails; competitor/release changes confound |
+
+Sources (all simulated): R1 rankings_overview/acorn, Oct 9–15, fetched Oct 16 08:10; K1 keywords_list/acorn, Oct 14–15, checked 08:15; V1 review_changes/acorn, event Oct 15 17:00; D1 plugin_get/acorn downloads Oct 9–15, fetched 08:10; P1 plugin_get/acorn, fetched 08:10. No causal, revenue or precise install-growth inference.

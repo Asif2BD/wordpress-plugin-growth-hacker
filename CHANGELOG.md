@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.0-beta.2 — 2026-10-16
+
+- Require concise daily/deep reports with scorecards, dated charts or honest fallbacks, aligned comparisons and at most three specific experiments.
+- Add staged customer-tool calls and quarantine malformed dates/reports, review-scale mismatches and inconsistent milestones pending verified upstream fixes.
+- Add fictional evaluation fixtures for evidence traceability, chart integrity and experiment quality; retain read-only, tenant and delivery boundaries.
+- No live Grok compatibility or verified badge asserted.
+
 ## 0.1.0-beta.1 — 2026-10-16
 
 - Rename the supplied WPInsight daily brief draft to WordPress Plugin Growth Hacker Agent.

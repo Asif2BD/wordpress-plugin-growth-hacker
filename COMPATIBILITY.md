@@ -1,4 +1,4 @@
-# Compatibility matrix — beta 0.1.0-beta.1
+# Compatibility matrix — beta 0.1.0-beta.2
 
 | Surface | Evidence | Status |
 |---|---|---|

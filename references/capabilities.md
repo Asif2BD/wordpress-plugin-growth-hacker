@@ -38,3 +38,7 @@ Report templates currently available: `growth-summary`, `keyword-movement`, `plu
 - A scheduler, durable deduplication store, Slack/email sending, native Grok custom-MCP setup, OAuth setup parameters, or delivery receipts
 
 `slackIntegration:true` in workspace features does not expose a Slack-send tool. Scheduling and sending require separately verified host/destination capabilities. OAuth discovery/registration details and Grok runtime compatibility remain integration acceptance work, not established by this schema audit.
+
+## Beta.2 validation caveat
+
+Date/report/review/milestone defects are under separate repair. Schema presence does not prove returned values are correct. Apply the [validation playbook](analysis-playbook.md) to each response; quarantine malformed custom reports and conflicting scope/date/unit values until runtime evidence supports them. No fixed deployment is assumed by this release.
