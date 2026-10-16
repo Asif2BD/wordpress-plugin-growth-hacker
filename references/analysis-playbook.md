@@ -18,6 +18,14 @@ Treat date/report/review/milestone bugs as unresolved until the returned data pa
 
 One failed signal need not block all analysis: quarantine only affected claims unless identity/tenant scope fails. A comparison needs aligned dates, units, fresh observations and coverage for both plugins. Do not treat a stale competitor as a current benchmark.
 
+## Runtime-derived temporal and rendering rules
+
+- An old review may explain historical friction but must be labeled historical with its date. Never count or describe an out-of-window review as a new current-period event.
+- Undated lifetime totals belong in a labeled “undated total” context cell, not a current-period column or delta. A fresh fetch time does not date the underlying event/count.
+- A date-only field has unknown timezone unless the endpoint documents one. Distinguish the requested analysis timezone from source timezone; do not silently call source dates UTC or convert a bare date across zones.
+- Cached approximate install estimates are contextual only. Do not compare them as same-window/current-period evidence or use them for growth/distance calculations. Compare compatible direct dated observations instead.
+- If a valid dated series exists, actually try the host's supported native chart capability before claiming it unavailable. Record the returned limitation/failure if it cannot render, and use a dated table. With insufficient data, say “Trend unavailable” and leave renderer capability unassessed; do not fake a chart or call lack of data a renderer limitation.
+
 ## Experiments
 
 Choose at most three based on evidence strength, relevance to the user's plugin, plausible impact and estimated effort. Ordinal priority is judgment, not a fabricated growth score. Every intervention is a draft requiring approval before implementation.
