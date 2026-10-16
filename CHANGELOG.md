@@ -3,6 +3,7 @@
 ## 0.1.0-beta.4 — 2026-10-16
 
 - Require named color-coded chart legends and cautious observational causal wording.
+- Address PR2 review: distinguish pre-window, post-window and future-dated reviews.
 - Record reported fictional-chart/deep-mode Grok UI evidence without transferring it to production data or final-version compatibility.
 - Preserve published beta.2 and beta.3 unchanged.
 

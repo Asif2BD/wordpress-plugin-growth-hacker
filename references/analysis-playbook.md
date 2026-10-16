@@ -20,7 +20,7 @@ One failed signal need not block all analysis: quarantine only affected claims u
 
 ## Runtime-derived temporal and rendering rules
 
-- An old review may explain historical friction but must be labeled historical with its date. Never count or describe an out-of-window review as a new current-period event.
+- An old review may explain historical friction but must be labeled historical with its date. Pre-window reviews are historical; post-window reviews are excluded from the requested period, and future-dated reviews are quarantined. Never describe any of these as a current-period event.
 - Undated lifetime totals belong in a labeled “undated total” context cell, not a current-period column or delta. A fresh fetch time does not date the underlying event/count.
 - A date-only field has unknown timezone unless the endpoint documents one. Distinguish the requested analysis timezone from source timezone; do not silently call source dates UTC or convert a bare date across zones.
 - Cached approximate install estimates are contextual only. Do not compare them as same-window/current-period evidence or use them for growth/distance calculations. Compare compatible direct dated observations instead.

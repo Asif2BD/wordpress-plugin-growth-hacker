@@ -2,7 +2,7 @@
 
 Run from repository root: `python3 -m unittest discover -s tests -v`.
 
-39 offline tests cover package metadata, the core size limit, all relative documentation links, stale/truncated coverage, missing/null rank and download data, unequal comparison windows, tenant switches, selected-plugin filtering, review prompt injection, rank direction, false install/revenue/causal growth inference, duplicate and uncertain sends, exact destination authorization/revocation, and durable-ledger requirements.
+40 offline tests cover package metadata, the core size limit, all relative documentation links, stale/truncated coverage, missing/null rank and download data, unequal comparison windows, tenant switches, selected-plugin filtering, review prompt injection, rank direction, false install/revenue/causal growth inference, duplicate and uncertain sends, exact destination authorization/revocation, and durable-ledger requirements.
 
 The scenario functions are a deliberately small reference policy model in the test file. They run on fictional inputs without network access or credentials. Passing them verifies those examples and package contracts, not whether an arbitrary assistant will obey the skill. They are not production enforcement or a live MCP adapter.
 
@@ -31,3 +31,5 @@ Beta.3 adds five offline regressions for historical reviews, undated totals, dat
 ## Additional reported Grok UI evidence
 
 The parent subsequently reported actual native chart rendering for explicitly fictional Acorn/Cedar dated series, a correct competitor table and compact deep output under 700 words. This is evidence for that tested Grok app, with additional retest instructions, not proof of production-series validity or final beta.4 compliance. Real plugin series remain uncharted until validated separately. Beta.4 adds named color-coded legends and “candidate explanation identified” wording, with two offline regressions. No broad compatibility badge is asserted.
+
+A late PR2 review finding is corrected in beta.4: pre-window reviews are historical, post-window reviews excluded, and observations after the analysis as-of date quarantined. A dedicated regression distinguishes those cases.
