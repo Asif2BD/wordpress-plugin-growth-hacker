@@ -1,0 +1,12 @@
+{
+  "scope": {"tenant":"fictional-a","slug":"acorn","from":"2026-10-09","to":"2026-10-15"},
+  "cases": [
+    {"name":"valid_rank","metric":{"tenant":"fictional-a","slug":"acorn","from":"2026-10-09","to":"2026-10-15","unit":"rank","expected_unit":"rank","points":[["2026-10-09",18],["2026-10-15",24]]},"usable":true},
+    {"name":"custom_report_wrong_dates","metric":{"tenant":"fictional-a","slug":"acorn","from":"2026-09-09","to":"2026-09-15","unit":"rank","expected_unit":"rank","points":[["2026-09-09",18],["2026-09-15",24]]},"usable":false},
+    {"name":"wrong_plugin","metric":{"tenant":"fictional-a","slug":"cedar","from":"2026-10-09","to":"2026-10-15","unit":"rank","expected_unit":"rank","points":[["2026-10-09",18],["2026-10-15",24]]},"usable":false},
+    {"name":"review_scale_mismatch","metric":{"tenant":"fictional-a","slug":"acorn","from":"2026-10-09","to":"2026-10-15","unit":"percent","expected_unit":"stars","points":[["2026-10-09",92],["2026-10-15",94]]},"usable":false},
+    {"name":"duplicate_dates","metric":{"tenant":"fictional-a","slug":"acorn","from":"2026-10-09","to":"2026-10-15","unit":"rank","expected_unit":"rank","points":[["2026-10-09",18],["2026-10-09",24]]},"usable":false},
+    {"name":"out_of_window","metric":{"tenant":"fictional-a","slug":"acorn","from":"2026-10-09","to":"2026-10-15","unit":"rank","expected_unit":"rank","points":[["2026-10-09",18],["2026-10-16",24]]},"usable":false},
+    {"name":"missing_rank","metric":{"tenant":"fictional-a","slug":"acorn","from":"2026-10-09","to":"2026-10-15","unit":"rank","expected_unit":"rank","points":[["2026-10-09",null],["2026-10-15",24]]},"usable":false}
+  ]
+}
