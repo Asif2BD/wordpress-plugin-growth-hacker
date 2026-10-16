@@ -50,12 +50,13 @@ class RuntimeBoundaries(unittest.TestCase):
         self.assertEqual(render_decision(2,'unsupported'),'dated table; renderer limitation disclosed')
 
     def test_named_color_legend_matches_series(self):
-        def legend_ok(series,legend):
-            return set(series)==set(legend) and all(legend[n]['label']==n and legend[n]['color'] for n in series)
+        def legend_ok(series,legend,metric):
+            return bool(metric) and set(series)==set(legend) and all(legend[n]['label']==n and legend[n]['color'] for n in series)
         series={'Acorn':[("2026-10-15",11)],'Cedar':[("2026-10-15",14)]}
         good={'Acorn':{'label':'Acorn','color':'blue'},'Cedar':{'label':'Cedar','color':'orange'}}
-        self.assertTrue(legend_ok(series,good))
-        good['Acorn']['label']='first line';self.assertFalse(legend_ok(series,good))
+        self.assertTrue(legend_ok(series,good,'simple forms keyword rank'))
+        self.assertFalse(legend_ok(series,good,''))
+        good['Acorn']['label']='first line';self.assertFalse(legend_ok(series,good,'simple forms keyword rank'))
 
     def test_observational_timing_does_not_establish_or_exclude_cause(self):
         def causal_label(evidence):

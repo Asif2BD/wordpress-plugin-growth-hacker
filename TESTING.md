@@ -33,3 +33,5 @@ Beta.3 adds five offline regressions for historical reviews, undated totals, dat
 The parent subsequently reported actual native chart rendering for explicitly fictional Acorn/Cedar dated series, a correct competitor table and compact deep output under 700 words. This is evidence for that tested Grok app, with additional retest instructions, not proof of production-series validity or final beta.4 compliance. Real plugin series remain uncharted until validated separately. Beta.4 adds named color-coded legends and “candidate explanation identified” wording, with two offline regressions. No broad compatibility badge is asserted.
 
 A late PR2 review finding is corrected in beta.4: pre-window reviews are historical, post-window reviews excluded, and observations after the analysis as-of date quarantined. A dedicated regression distinguishes those cases.
+
+PR3 review restored the explicit chart metric label alongside named legends. The legend regression now rejects a missing metric label as well as positional series labels.
