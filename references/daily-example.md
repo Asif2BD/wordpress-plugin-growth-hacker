@@ -1,12 +1,12 @@
 # Fictional daily brief
 
-Every plugin, metric, date and source below is fictional. This demonstrates a host with no chart renderer; no real customer evidence or invented URLs.
+Every plugin, metric, date and source below is fictional. A simulated native-chart attempt returns unsupported; no real customer evidence or invented URLs.
 
 **Verdict:** Acorn's keyword visibility weakened; a sampled setup complaint justifies a focused reproduction before proposing onboarding changes.
 
 Example Workspace · acorn · 9–15 Oct 2026 UTC · as-of 16 Oct 08:15 · rank 6/7 days; one gap.
 
-| Metric | Current | Baseline/change | Evidence/quality |
+| Metric | Latest observed | Baseline/change | Evidence/quality |
 |---|---|---|---|
 | Directory rank | 24 | 18; worsened 6 | R1; one missing day |
 | “simple forms” rank | 11 | 14 on Oct 14; improved 3 | K1; two dated points |

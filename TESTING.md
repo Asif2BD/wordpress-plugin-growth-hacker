@@ -2,7 +2,7 @@
 
 Run from repository root: `python3 -m unittest discover -s tests -v`.
 
-32 offline tests cover package metadata, the core size limit, all relative documentation links, stale/truncated coverage, missing/null rank and download data, unequal comparison windows, tenant switches, selected-plugin filtering, review prompt injection, rank direction, false install/revenue/causal growth inference, duplicate and uncertain sends, exact destination authorization/revocation, and durable-ledger requirements.
+37 offline tests cover package metadata, the core size limit, all relative documentation links, stale/truncated coverage, missing/null rank and download data, unequal comparison windows, tenant switches, selected-plugin filtering, review prompt injection, rank direction, false install/revenue/causal growth inference, duplicate and uncertain sends, exact destination authorization/revocation, and durable-ledger requirements.
 
 The scenario functions are a deliberately small reference policy model in the test file. They run on fictional inputs without network access or credentials. Passing them verifies those examples and package contracts, not whether an arbitrary assistant will obey the skill. They are not production enforcement or a live MCP adapter.
 
@@ -21,3 +21,9 @@ For runtime retesting, load the entire beta.2 package, confirm its version, use 
 The generic skill-creator validator rejects the pre-existing ProSkills top-level fields author/category/triggers/version; those fields are retained for the current publisher contract. YAML parsing, required metadata, package size and relative links are covered by package tests. This is a packaging-schema difference, not a live integration pass.
 
 PR review fixes add metric-specific zero handling, strict ISO-date parsing, finite numeric validation and evidence-bound experiment metrics/baselines. Four regression tests cover these findings.
+
+## Reported limited runtime evidence (candidate only)
+
+The parent task reported a Grok test of candidate revision 594571b on 16 October 2026: the fictional fixture accepted valid endpoints and quarantined six invalid cases; a live daily response used six scorecard rows, an explicit unavailable trend, three validation actions and approximately 279 words. This is reported evidence, not a run independently observed here. That candidate differs from the final beta.2 test-harness fixes and from beta.3 instructions. Do not transfer it to blanket compatibility or final-version certification. Deep analysis and actual chart rendering were not tested. No private response or real customer metrics are included.
+
+Beta.3 adds five offline regressions for historical reviews, undated totals, date-only timezone uncertainty, cached estimates and renderer-attempt versus missing-data states. Final beta.3 requires a fresh runtime retest using the included guide.
