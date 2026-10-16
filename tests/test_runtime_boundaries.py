@@ -3,9 +3,13 @@ import unittest
 from datetime import date
 
 
-def period_label(observed, start, end):
+def period_label(observed, start, end, as_of):
     if observed is None: return 'undated total'
-    return 'current period' if date.fromisoformat(start)<=date.fromisoformat(observed)<=date.fromisoformat(end) else 'historical'
+    value=date.fromisoformat(observed)
+    if value>date.fromisoformat(as_of): return 'quarantined future'
+    if value<date.fromisoformat(start): return 'historical'
+    if value>date.fromisoformat(end): return 'excluded post-window'
+    return 'current period'
 
 
 def source_timezone(date_only, documented_timezone=None):
@@ -24,11 +28,11 @@ def render_decision(valid_points, attempt):
 
 class RuntimeBoundaries(unittest.TestCase):
     def test_old_reviews_are_historical(self):
-        self.assertEqual(period_label('2026-09-01','2026-10-09','2026-10-15'),'historical')
-        self.assertEqual(period_label('2026-10-15','2026-10-09','2026-10-15'),'current period')
+        self.assertEqual(period_label('2026-09-01','2026-10-09','2026-10-15','2026-10-16'),'historical')
+        self.assertEqual(period_label('2026-10-15','2026-10-09','2026-10-15','2026-10-16'),'current period')
 
     def test_undated_total_is_not_current_period(self):
-        self.assertEqual(period_label(None,'2026-10-09','2026-10-15'),'undated total')
+        self.assertEqual(period_label(None,'2026-10-09','2026-10-15','2026-10-16'),'undated total')
 
     def test_date_only_does_not_imply_utc(self):
         self.assertEqual(source_timezone('2026-10-15'),'unknown')
@@ -44,3 +48,24 @@ class RuntimeBoundaries(unittest.TestCase):
         self.assertEqual(render_decision(2,None),'test supported native renderer')
         self.assertEqual(render_decision(2,'success'),'chart')
         self.assertEqual(render_decision(2,'unsupported'),'dated table; renderer limitation disclosed')
+
+    def test_named_color_legend_matches_series(self):
+        def legend_ok(series,legend,metric):
+            return bool(metric) and set(series)==set(legend) and all(legend[n]['label']==n and legend[n]['color'] for n in series)
+        series={'Acorn':[("2026-10-15",11)],'Cedar':[("2026-10-15",14)]}
+        good={'Acorn':{'label':'Acorn','color':'blue'},'Cedar':{'label':'Cedar','color':'orange'}}
+        self.assertTrue(legend_ok(series,good,'simple forms keyword rank'))
+        self.assertFalse(legend_ok(series,good,''))
+        good['Acorn']['label']='first line';self.assertFalse(legend_ok(series,good,'simple forms keyword rank'))
+
+    def test_observational_timing_does_not_establish_or_exclude_cause(self):
+        def causal_label(evidence):
+            return 'candidate explanation identified' if evidence=='observational timing' else 'insufficient causal evidence'
+        result=causal_label('observational timing')
+        self.assertEqual(result,'candidate explanation identified')
+        self.assertNotIn(result,('cause found','cause ruled out'))
+
+
+    def test_post_window_and_future_are_not_historical(self):
+        self.assertEqual(period_label('2026-10-16','2026-10-09','2026-10-15','2026-10-16'),'excluded post-window')
+        self.assertEqual(period_label('2026-10-17','2026-10-09','2026-10-15','2026-10-16'),'quarantined future')

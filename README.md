@@ -1,6 +1,6 @@
 # WordPress Plugin Growth Hacker Agent
 
-**Free beta · 0.1.0-beta.3 · MIT**
+**Free beta · 0.1.0-beta.4 · MIT**
 
 A reusable instruction skill that helps a WordPress plugin team understand customer WPInsight signals and draft growth experiments. “Agent” is product branding: this package is not hosted software, a WordPress plugin, or an autonomous execution engine.
 

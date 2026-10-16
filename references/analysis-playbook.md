@@ -20,11 +20,17 @@ One failed signal need not block all analysis: quarantine only affected claims u
 
 ## Runtime-derived temporal and rendering rules
 
-- An old review may explain historical friction but must be labeled historical with its date. Never count or describe an out-of-window review as a new current-period event.
+- An old review may explain historical friction but must be labeled historical with its date. Pre-window reviews are historical; post-window reviews are excluded from the requested period, and future-dated reviews are quarantined. Never describe any of these as a current-period event.
 - Undated lifetime totals belong in a labeled “undated total” context cell, not a current-period column or delta. A fresh fetch time does not date the underlying event/count.
 - A date-only field has unknown timezone unless the endpoint documents one. Distinguish the requested analysis timezone from source timezone; do not silently call source dates UTC or convert a bare date across zones.
 - Cached approximate install estimates are contextual only. Do not compare them as same-window/current-period evidence or use them for growth/distance calculations. Compare compatible direct dated observations instead.
 - If a valid dated series exists, actually try the host's supported native chart capability before claiming it unavailable. Record the returned limitation/failure if it cannot render, and use a dated table. With insufficient data, say “Trend unavailable” and leave renderer capability unassessed; do not fake a chart or call lack of data a renderer limitation.
+
+## Chart legends and causal wording
+
+Use a named, color-coded legend for each plotted series (for example Acorn and Cedar), with matching labels/colors on the chart; never identify series only as first/second line or by color alone. Preserve actual plugin/keyword names and units. Rendering a fictional test chart proves only the tested host capability, not production data validity.
+
+When only observational timing supports an explanation, say “candidate explanation identified.” Do not say “cause found” or “cause ruled out.” List the plausible confounder and the evidence/experiment needed to distinguish alternatives. Missing evidence cannot rule out a cause; temporal coincidence cannot establish one.
 
 ## Experiments
 
